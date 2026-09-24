@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const { add, completeTask } = require('../src/calculator');
 
 test('adds two numbers', () => {
-  assert.equal(add(2, 3), 5);
+  assert.equal(add(2, 3), 99);
 });
 
 test('marks a task as completed without mutating the original', () => {
