@@ -9,6 +9,7 @@ env:
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     outputs:
       release-name: ${{ steps.metadata.outputs.release-name }}
     steps:
@@ -27,6 +28,7 @@ jobs:
   report:
     needs: prepare
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: ${{ needs.prepare.result == 'success' }}
     steps:
       - run: echo "Release name is ${{ needs.prepare.outputs.release-name }}"
