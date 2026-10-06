@@ -1,4 +1,4 @@
-ame: Example - Concurrency
+name: Example - Concurrency
 
 on:
   workflow_dispatch:
