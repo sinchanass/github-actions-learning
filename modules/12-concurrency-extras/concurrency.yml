@@ -15,6 +15,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - run: echo "This run is ${{ github.run_id }} on ${{ github.ref }}"
+      - name: Sleep for 120 seconds
+        timeout-minutes: 1
+        run: sleep 120
       - name: Optional flaky demo
         continue-on-error: true
         run: echo "If this failed, the next step would still run"
